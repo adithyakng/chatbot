@@ -1,0 +1,58 @@
+.main-panel
+{
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	/* overflow: scroll;
+	height:400px; */
+	
+}
+.para_user
+{
+	color:red;
+	text-align: right;
+	font-size: 25px;
+}
+.para_bot
+{
+	color:green;
+	text-align: left;
+	font-size: 25px;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.button
+{
+	margin: 10px;
+	color: red;
+}
+
+.login-div
+{
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	font-size: 25px;
+	
+}
+.name
+{
+	margin: 10px;
+}
+#password
+{
+
+	margin: 10px;
+}
+.failure
+{
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	font-size: 25px;
+}
+#user_input
+{
+	width: 500px;
+}

@@ -1,0 +1,11 @@
+openapi: 3.0.0
+info:
+  title: login
+  version: '1.0'
+  description: Login Api
+servers:
+  - url: 'http://localhost:8000'
+paths: {}
+components:
+  schemas: {}
+  securitySchemes: {}
