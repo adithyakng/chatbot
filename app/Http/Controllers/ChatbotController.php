@@ -10,7 +10,7 @@ class ChatbotController extends Controller
     public function chatbotRequestPost(Request $request)
    {
     //$this->info("adithya");
-    $input=$request['input'];
+    $input=strtolower($request['input']);
     if($input=="bye")
     {
         $request->session()->forget('username');

@@ -13,7 +13,7 @@
   </head>
   <body onload="load_page()">
     <div class="container">
-      <h2>Registration</h2><br/>
+    <h2 align='center'>Registration</h2><br/>
       <div class="container">
     </div>
       <form method="post">
@@ -43,7 +43,7 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label>Phone Number:</label>
-            <input type="number" class="form-control" name="number" id="number" required>
+            <input type="text" class="form-control" name="number" id="number" required>
           </div>
         </div>
         
@@ -56,7 +56,7 @@
           <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-          <a href="/login_add"><button type="button" class="btn btn-success" visible=false; id="login_href">Login</button></a>
+          <a href="/"><button type="button" class="btn btn-success" visible=false; id="login_href">Login</button></a>
           </div>
         </div>
         <div class="row">
@@ -104,18 +104,36 @@
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-        console.log('Login executed');
+        console.log(this.responseText);
                     
-                    if(this.responseText=='present')
+                   
+                   var result=JSON.parse(this.responseText);
+                   if(result['reply']=='present')
                     {
                         document.getElementById('res').innerHTML="UserName already Present";
                     }
-                    else
+                    else if(result['reply']=='success')
                     {
                         document.getElementById("login_href").style.visibility = "visible";
                         document.getElementById('res').innerHTML="Successfully Registered Please Login";  
                     }
-                       }
+                   if(result['name']!=null)
+                   {
+                    document.getElementById('res').innerHTML=result['name']; 
+                   }
+                   else if(result['password']!=null)
+                   {
+                    document.getElementById('res').innerHTML=['password']; 
+                   }
+                   else if(result['email']!=null)
+                   {
+                    document.getElementById('res').innerHTML=result['email']; 
+                   }
+                   else if(result['phone']!=null)
+                   {
+                    document.getElementById('res').innerHTML=result['phone']; 
+                   }
+                }
         };
 xhttp.open("POST", "addRegister", true);
 xhttp.setRequestHeader("Content-Type", "application/json");
@@ -123,5 +141,6 @@ xhttp.send(JSON.stringify(input_json));
      }
 
     </script>
+    
   </body>
 </html>

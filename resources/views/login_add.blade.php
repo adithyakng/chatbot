@@ -47,8 +47,8 @@
           
         </div>
         <div class="row">
-          <div class="col-md-6"></div>
-          <div class="form-group col-md-4">
+          
+          <div  align='center'>
             <p id="res"></p>
           </div>
         </div>

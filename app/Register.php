@@ -7,7 +7,7 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class Register extends Eloquent
 {
-    protected $connection = 'mongodb';
+    protected $connection = 'mongodb_conn';
     protected $collection = 'login';
     
     protected $fillable = [
