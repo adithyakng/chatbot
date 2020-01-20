@@ -1,6 +1,11 @@
 Documentation Link:
 https://documenter.getpostman.com/view/10099642/SWLmWisq?version=latest
 
+Steps to Run:
+1. Clone the entire directory.
+2. Open the directory in CMD and enter "php artisan serve"  (PHP must exist in the system).
+
+
 
 <<<<<<< HEAD
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
