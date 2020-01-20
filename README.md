@@ -3,7 +3,8 @@ https://documenter.getpostman.com/view/10099642/SWLmWisq?version=latest
 
 Steps to Run:
 1. Clone the entire directory.
-2. Open the directory in CMD and enter "php artisan serve"  (PHP must exist in the system).
+2. Install dependencies using "composer install" (Composer must exist in the system).
+3. Open the directory in CMD and enter "php artisan serve"  (PHP must exist in the system).
 
 
 
